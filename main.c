@@ -4,13 +4,21 @@
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char *argv[]) {
-	int a,i,sum=0;
-    printf("input a number : ");
-    scanf("%d",&a);
+	int x,y,result;
+    char op;
+    printf("enter the calculation : ");
+    scanf("%d %c %d",&x,&op,&y);
+
+    if(op=='+')
+      result=x+y;
+    else if (op=='-')
+      result=x-y;
+    else if (op=='*')
+      result=x*y;
+    else if(op=='/')
+      result=x/y;
     
-	for(i=0;i<=a;i++)
-       sum=sum+i;
-   
-    printf("더하기 결과는 %d입니다.",sum);
-	return 0;
+	printf("=%d\n",result);
+
+ return 0;
 }
